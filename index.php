@@ -9,7 +9,7 @@
     <!-- creare il form per paragrafo e parola da censurare -->
     <div class="form_container">
         <h1> Badword censor</h1>
-        <form action="" method="post">
+        <form action="script.php" method="post">
             <div class="text_area">
                 <textarea name="paragraph" id="paragraph" cols="50" rows="10" placeholder="Inserisci il tuo testo: "></textarea>
             </div>
