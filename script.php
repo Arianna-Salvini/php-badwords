@@ -4,7 +4,9 @@ $textParagraph =$_POST['paragraph'];
 $badword = $_POST['badword'];
 
 var_dump($textParagraph);
-var_dump($badword)
+var_dump($badword);
+
+$textCensored = str_replace($badword, '***', $textParagraph);
 ?>
 
 <!DOCTYPE html>
@@ -16,12 +18,17 @@ var_dump($badword)
 </head>
 <body>
 
-    <!-- stampare a schermo il paragrafo e la sua lunghezza -->
+<!-- stampare a schermo il paragrafo e la sua lunghezza -->
+
     <h3>Il tuo testo</h3>
-    <p> <?= $textParagraph?> </p>
+    <!-- Stampare il testo censurato -->
+    <!-- <p> <?= $textParagraph?> </p> -->
+    <p> <?= $textCensored?> </p>
+
     <div class="parag_length">
         <?= strlen($textParagraph) ?> 
     </div>
+
 
 </body>
 </html>
